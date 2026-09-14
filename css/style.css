@@ -37,3 +37,10 @@ button {
   border: 0;
   border-radius: 999px;
 }
+
+.info {
+  margin-top: 24px;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+}
