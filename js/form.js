@@ -8,7 +8,9 @@ form.addEventListener("submit", (event) => {
   preview.textContent = [
     `Nama: ${data.get("nama")}`,
     `Email: ${data.get("email")}`,
+    `WhatsApp: ${data.get("whatsapp")}`,
     `Paket: ${data.get("paket")}`,
+    `Waktu Kontak: ${data.get("waktu")}`,
     `Topik: ${data.get("topik")}`,
     `Pesan: ${data.get("pesan")}`,
   ].join("\n");

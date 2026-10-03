@@ -36,6 +36,11 @@
           <label for="email">Email</label>
           <input id="email" name="email" type="email" autocomplete="email" required />
         </div>
+        
+        <div class="field">
+         <label for="whatsapp">Nomor WhatsApp</label>
+         <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required />
+        </div>
 
         <div class="field">
           <label for="paket">Paket yang diminati</label>
@@ -46,6 +51,25 @@
             <option value="reseller">Paket reseller</option>
           </select>
         </div>
+
+        <fieldset>
+         <legend>Waktu yang nyaman untuk dihubungi</legend>
+
+        <label>
+         <input type="radio" name="waktu" value="pagi" required />
+         Pagi (08.00 - 12.00)
+        </label>
+
+        <label>
+         <input type="radio" name="waktu" value="siang" />
+         Siang (12.00 - 16.00)
+        </label>
+
+        <label>
+         <input type="radio" name="waktu" value="sore" />
+         Sore (16.00 - 21.00)
+        </label>
+       </fieldset>
 
         <fieldset>
          <legend>Topik pertanyaan</legend>
