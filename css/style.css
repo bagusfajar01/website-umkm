@@ -44,7 +44,7 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
   gap: var(--space-4);
   align-items: center;
   padding: var(--space-5);
@@ -165,9 +165,9 @@ a:hover {
 
 .nav {
   display: flex;
+  flex-direction: column;
   gap: var(--space-3);
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .brand {
@@ -180,11 +180,9 @@ a:hover {
 
 .nav ul {
   display: flex;
+  flex-direction: column;
   gap: var(--space-2);
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .nav li {
@@ -253,12 +251,8 @@ a:hover {
 .product-grid,
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-3);
-}
-
-.gallery-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .media-card {
@@ -422,4 +416,50 @@ audio {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.table-scroll table {
+  min-width: 40rem;
+}
+
+@media (min-width: 42rem) {
+  .nav ul {
+    flex-direction: row;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 60rem) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
