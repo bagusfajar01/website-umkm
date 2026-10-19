@@ -13,14 +13,28 @@
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
         <a class="brand" href="index.html">Kopi Nusa</a>
-        <ul>
-      <li><a aria-current="page" href="index.html">Beranda</a></li>
-      <li><a href="tentang.html">Tentang Kami</a></li>
-      <li><a href="produk.html">Produk</a></li>
-      <li><a href="galeri.html">Galeri</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-      <li><a href="#kontak">Kontak Singkat</a></li>
-      </ul>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Buka menu navigasi"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="#kontak">Kontak Singkat</a></li>
+        </ul>
       </nav>
     </header>
 
