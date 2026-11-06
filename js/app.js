@@ -3,9 +3,34 @@
 console.log("P09 JavaScript aktif");
 
 const produkUmkm = [
-  { nama: "Arabika Gayo", kategori: "Kopi", harga: 85000, stok: 12 },
-  { nama: "Robusta Temanggung", kategori: "Kopi", harga: 65000, stok: 4 },
-  { nama: "Paket Seduh", kategori: "Bundling", harga: 125000, stok: 0 },
+  {
+    nama: "Arabika Gayo",
+    kategori: "Kopi",
+    harga: 85000,
+    stok: 12,
+    unggulan: true,
+  },
+  {
+    nama: "Robusta Temanggung",
+    kategori: "Kopi",
+    harga: 65000,
+    stok: 4,
+    unggulan: false,
+  },
+  {
+    nama: "Paket Seduh",
+    kategori: "Bundling",
+    harga: 125000,
+    stok: 0,
+    unggulan: false,
+  },
+  {
+    nama: "Matcha Coffee",
+    kategori: "Kopi",
+    harga: 28000,
+    stok: 10,
+    unggulan: true,
+  },
 ];
 
 console.table(produkUmkm);
@@ -61,6 +86,7 @@ function renderProduk() {
     const status = statusStok(produk.stok);
     const kategori = labelKategori(produk.kategori);
     const labelAksi = produk.stok > 0 ? "Siap dipesan" : "Hubungi admin";
+    const labelUnggulan = produk.unggulan ? "Produk Unggulan" : "";
 
     if (produk.stok > 0) {
       jumlahTersedia = jumlahTersedia + 1;
@@ -70,6 +96,7 @@ function renderProduk() {
       <article class="js-product-card">
         <h3>${produk.nama}</h3>
         <p>${kategori}</p>
+        <p>${labelUnggulan}</p>
         <p class="price">${formatRupiah.format(produk.harga)}</p>
         <span class="stock-badge ${status.className}">${status.label}</span>
         <p>${labelAksi}</p>
