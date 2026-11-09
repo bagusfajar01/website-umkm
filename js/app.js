@@ -102,7 +102,15 @@ function renderProduk() {
     ? `Produk unggulan: ${produkUnggulan.nama}`
     : "Belum ada produk unggulan.";
 
+  produkUmkm.forEach((produk) => {
+    console.log(`Nama: ${produk.nama}, Stok: ${produk.stok}`);
+  });
+
   console.table(produkUmkm);
 }
 
-document.addEventListener("DOMContentLoaded", renderProduk);
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector("#produk-dinamis")) {
+    renderProduk();
+  }
+});
